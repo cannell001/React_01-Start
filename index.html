@@ -4,15 +4,26 @@
     <meta charset="utf-8">
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <title>Lesson 02 - JSX without including Babel</title>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Lesson 04 - Using Class Syntax to Create a Component</title>
 </head>
 <body>
 	<div id="react-container"></div>
 
-	<script type="text/javascript">
+	<script type="text/babel">
+
+		class Hello extends React.Component {
+			render() {
+				return (
+					<div>
+						<h1>Welcome to the "NON OOP" World of JavaScript</h1>
+					</div>
+				)
+			}
+		}
 
 		ReactDOM.render(
-			<h1>Hello World</h1>,
+			<Hello/>,
 			document.getElementById('react-container')
 		)
 
